@@ -6,6 +6,10 @@
         <title>Minecraft Education on Linux project</title>
     </head>
     <style>
+      body { 
+        margin-left:10px; 
+        margin-right:10px; 
+      }
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
       * {
         font-family:'Noto Sans', sans-serif;
@@ -15,6 +19,24 @@
       }
       #header h1 {
         margin-left:10px;
+      }
+      #getStartedBox {
+        border:0.5px solid lightgray;
+        background-color: #f2f2f2;
+        width:250px;
+        text-align:center;
+        padding:25px 20px;
+        border-radius:10px;
+      }
+      #getStartedTable {
+        width:100%;
+      }
+      #getStartedTable #getStartedBox {
+        text-align: center;
+      }
+      h2 {
+        text-transform: uppercase;
+        text-align: center;
       }
     </style>
     <body>
@@ -31,9 +53,22 @@
         </table>
       </div>
       <hr>
-      <p>
-        Get Started:<br>
-        <a href='https://gist.github.com/techguy16/04dced474f2f2ab3171ccfe46224c640'>Try the Wine install tutorial ></a>
-      </p>
+      <h2>Get Started</h2>
+      <table id='getStartedTable'>
+        <tr>
+          <td align="center">
+            <p id='getStartedBox'>
+              Install (pre-1.18.45)<br>
+              <a href='https://gist.github.com/techguy16/04dced474f2f2ab3171ccfe46224c640'>Try the Wine install tutorial ></a>
+            </p>
+          </td>
+          <td align="center">
+            <p id='getStartedBox'>
+              Need help? Want to contribute?<br>
+              <a href='https://github.com/orgs/mceelinux/discussions'>Discuss it with us ></a>
+            </p>
+          </td>
+        </tr>
+      </table>
     </body>
 </html>
