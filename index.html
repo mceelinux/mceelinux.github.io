@@ -1,87 +1,123 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" type="image/x-icon" href="assets/logo.png">
-        <title>Minecraft Education on Linux project</title>
-    </head>
-    <style>
-      body { 
-        margin-left:10px; 
-        margin-right:10px; 
+   <head>
+      <meta charset="utf-8">
+      <link rel="icon" type="image/x-icon" href="assets/logo.png">
+      <title>Minecraft Education on Linux project</title>
+   </head>
+   <style>
+      body {
+      background: #f9f9f9;
+      font-family: 'Noto Sans', sans-serif;
+      color: #333;
+      line-height: 1.6;
       }
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-      * {
-        font-family:'Noto Sans', sans-serif;
+      #header {
+      background: linear-gradient(to right, #4CAF50, #8BC34A);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      margin: 20px;
       }
       #header img {
-        width:50px;
+      width: 50px;
       }
       #header h1 {
-        margin-left:10px;
-      }
-      #getStartedBox {
-        border:0.5px solid lightgray;
-        background-color: #f2f2f2;
-        width:250px;
-        text-align:center;
-        padding:25px 20px;
-        border-radius:10px;
-      }
-      #getStartedTable {
-        width:75%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      #getStartedTable #getStartedBox {
-        text-align: center;
+      font-size: 2em;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       }
       h2 {
-        text-transform: uppercase;
-        text-align: center;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
       }
-    </style>
-    <body>
+      #getStartedTable {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      }
+      #getStartedBox {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 300px;
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      #getStartedTable a {
+      display: inline-block;
+      color: #fff;
+      background-color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      }
+      #getStartedTable a:hover {
+      background-color: #4CAF50;
+      }
+      /* Responsive design */
+      @media (max-width: 768px) {
+      #getStartedTable {
+      flex-direction: column;
+      }
+      #getStartedBox {
+      width: 100%;
+      margin: 10px 0;
+      }
+      #header h1 {
+      font-size: 1.5em;
+      }
+      }
+   </style>
+   <body>
       <div id="header">
-        <table>
-          <tr>
-            <th>
-              <img src="data:image/png;base64,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">
-            </th>
-            <th>
-              <h1>Minecraft Education on Linux</h1>
-            </th>
-          </tr>
-        </table>
+         <table>
+            <tr>
+               <th>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAABUUExURcCZXpl0RbaPV49rQHVTMRcWFVuf+y577x5u6v9gXobVYuYoLmCyQd0THFKlNe3l4v+pQP+GJP95GssOGvFrExZi4UeULpkAE8xDAABAyCpkHP///32LP8oAAAABYktHRBsCYNSkAAAAB3RJTUUH6AYZFi4x1uAILgAABYFJREFUeNrt01luVUEQBcFrMIMNxkw2w/4XygbeXwmVWhm5gWrpRF/XcnfDtt+vYQDEAyAeAPEAiAdAPADiARAPgHgAxAMgHgDxAIgHQDwA4gEQD4B4AMQDIB4A8QCIB0A8AOIBEA+AeADEAyAeAPEAiAdAPADiARAPgHgAxAMgHgDxAIgHQDwA4gEQD4B4AMQDIB4A8QCIB0A8AOIBEA+AeADEAyAeAPEAiAdAPADiARAPgHgAxAPg8N4Meztsev/0tvcf/+D7YdP7p7e9PwDLbe8PwHLb+wOw3Pb+17vDe7/c9P3b+wMAwNkBAAAAZQAflgNguY/LAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANzoYbnTATwO294fAAAAAACALoBPy50O4POw7f2vp+VOB/Bl2Pb+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAze6GPS/3ddjpAKb7AQAAAAAAAMCpAL4NA+BwAN+HAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwHANOelqsDGA8IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAt/ux3M9hL8u9Dtve//q13O9hf5b7O2x7fwAAAAAAAM4FcK90AMQDIB4A8QCIB0A8AOIBEA+AeADEAyAeAPEAiAdAPADiARAPgHgAxAMgHgDxAIgHQDwA4gEQD4B4AMQDIB4A8QCIB0A8AOIBEA+AeADEAyAeAPEAiAdAPADiARAPgHgAxAMgHgDxAIgHQDwA4gEQD4B4AMQDIB4A8QCIB0A8AOIBEA+AeADEAyAeAPEAiAdAPADiARDvH6mETFb1lSPXAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTA2LTI1VDIyOjQ2OjQ5KzAwOjAwTqOKOgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0wNi0yNVQyMjo0Njo0OSswMDowMD/+MoYAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjQtMDYtMjVUMjI6NDY6NDkrMDA6MDBo6xNZAAAAAElFTkSuQmCC">
+               </th>
+               <th>
+                  <h1>Minecraft Education on Linux</h1>
+               </th>
+            </tr>
+         </table>
       </div>
       <hr>
       <h2>Place, Code, Share</h2>
       <div id="getStartedTable">
-        <p>Minecraft Education is a fun way of leaning many concepts, but this project aims to bring the fun to everyone's favourite OS, Linux</p>
+         <p>Minecraft Education is a fun way of leaning many concepts, but this project aims to bring the fun to everyone's favourite OS, Linux</p>
       </div>
       <hr>
       <h2>Get Started</h2>
       <table id='getStartedTable'>
-        <tr>
-          <td align="center">
-            <p id='getStartedBox'>
-              Install using Wine (pre-1.18.45)<br>
-              <a href='https://gist.github.com/techguy16/04dced474f2f2ab3171ccfe46224c640#file-wine-old-md-readme'>Start ></a>
-            </p>
-          </td>
-          <td align="center">
-            <p id='getStartedBox'>
-              Install using Waydroid<br>
-              <a href='https://gist.github.com/techguy16/04dced474f2f2ab3171ccfe46224c640#file-waydroid-md-readme'>Start ></a>
-            </p>
-          </td>
-          <td align="center">
-            <p id='getStartedBox'>
-              Need help? Want to contribute?<br>
-              <a href='https://github.com/orgs/mceelinux/discussions'>Discuss it with us ></a>
-            </p>
-          </td>
-        </tr>
+         <tr>
+            <td align="center">
+               <p id='getStartedBox'>
+                  Install using Wine (pre-1.18.45)<br>
+                  <a href='https://gist.github.com/techguy16/04dced474f2f2ab3171ccfe46224c640#file-wine-old-md-readme'>Start ></a>
+               </p>
+            </td>
+            <td align="center">
+               <p id='getStartedBox'>
+                  Install using Waydroid<br>
+                  <a href='https://gist.github.com/techguy16/04dced474f2f2ab3171ccfe46224c640#file-waydroid-md-readme'>Start ></a>
+               </p>
+            </td>
+            <td align="center">
+               <p id='getStartedBox'>
+                  Need help? Want to contribute?<br>
+                  <a href='https://github.com/orgs/mceelinux/discussions'>Discuss it with us ></a>
+               </p>
+            </td>
+         </tr>
       </table>
-    </body>
+   </body>
 </html>
