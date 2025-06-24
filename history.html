@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCEELinux – History</title>
+  <link rel="icon" type="image/png" href="https://mceelinux.github.io/assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    /* Timeline container */
+    .timeline {
+      position: relative;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      padding-left: 2rem;
+      border-left: 2px solid #4caf50;
+    }
+    /* Timeline item */
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    /* Circle on timeline */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.15rem;
+      top: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #4caf50;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 5px #4caf50;
+    }
+    /* Date label */
+    .timeline-date {
+      font-weight: 600;
+      color: #a0f0a0;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+    }
+    @media (max-width: 768px) {
+      .timeline {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 1.5rem;
+        border-left-width: 3px;
+      }
+      .timeline-item::before {
+        left: -1.25rem;
+        top: 0.75rem;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-neutral-900 text-white min-h-screen flex flex-col">
+  <header class="bg-neutral-950 shadow-md border-b border-neutral-800">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="assets/logo.png" alt="MCEELinux Logo" class="h-10">
+        <span class="text-lg font-semibold">MCEELinux</span>
+      </div>
+      <nav class="space-x-4 text-sm">
+        <a href="https://mceelinux.github.io/docs" class="hover:text-green-400">Docs</a>
+        <a href="https://mceelinux.github.io/history.html" class="hover:text-green-400">History</a>
+        <a href="https://github.com/mceelinux" class="hover:text-green-400">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-4xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold mb-12 text-center">MCEELinux History Timeline</h1>
+
+    <div class="timeline">
+      <div class="timeline-item glass">
+        <div class="timeline-date">29th March 2023 - First Documentation</div>
+        <h2 class="text-xl font-semibold mb-1">Documentation for running Minecraft Education in Wine</h2>
+        <p class="text-gray-400">
+          coming soon
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-neutral-950 text-center text-xs text-gray-500 py-6 border-t border-neutral-800">
+    &copy; 2025 <a href="https://github.com/techguy16">techguy16</a>a>. Not affiliated with Mojang or Microsoft.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
